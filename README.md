@@ -6,12 +6,12 @@ This project is a very basic [npm](https://www.npmjs.com/package/create-p) init 
 
 ### Usage
 
-`npm init p --name project --version 0.0.1`
+`npm init p --name project -- --version 0.0.1`
 
 ### Supported package properties
 
 - name (default: current directory name)
-- version (default: 0.0.1)
+- version (default: 0.0.1, must be behind double dash `--` or `npm init` will just show npm version)
 - description
 - main
 - repository
