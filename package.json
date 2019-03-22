@@ -1,13 +1,17 @@
 {
   "name": "create-p",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "bin": {
     "create-p": "index.js"
   },
   "repository": "adriengibrat/npm-create-p",
-  "keywords": ["npm init", "create", "package"],
+  "keywords": [
+    "npm init",
+    "create",
+    "package"
+  ],
   "author": "Adrien Gibrat <adrien.gibrat@gmail.com> (https://github.com/adriengibrat)",
   "license": "ISC",
   "homepage": "https://github.com/adriengibrat/npm-create-p"
