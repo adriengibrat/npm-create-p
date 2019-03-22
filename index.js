@@ -3,17 +3,21 @@
 const { writeFileSync: write } = require('fs')
 const args = parse(process.argv.slice(2))
 const json = data => JSON.stringify(data, null, 2)
+const commaSplit = /\s*,\s*/
 
 write('package.json', json({
 	name: args.name || require('path').basename(__dirname),
 	version: args.version || '0.0.1',
 	description: args.description,
+	keywords: args.keywords && args.keywords.split(commaSplit),
+	homepage: args.homepage,
+	bugs: args.bugs,
+	license: args.license,
+	author: args.author,
+	files: args.files && args.files.split(commaSplit),
 	main: args.main,
 	repository: args.repository,
-	keywords: args.keywords && args.keywords.split(','),
-	author: args.author,
-	license: args.license,
-	homepage: args.homepage,
+	private: !!args.private || undefined,
 }))
 
 function parse (args) {
