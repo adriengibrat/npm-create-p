@@ -16,6 +16,7 @@ write('package.json', json({
 	author: args.author,
 	files: args.files && args.files.split(commaSplit),
 	main: args.main,
+	types: args.types,
 	repository: args.repository,
 	private: !!args.private || undefined,
 }))
@@ -31,4 +32,3 @@ function parse (args) {
 			return params
 		}, {})
 }
-
